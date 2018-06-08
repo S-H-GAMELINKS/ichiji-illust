@@ -25,7 +25,7 @@ class IllustsController < ApplicationController
   # POST /illusts.json
   def create
     @illust = Illust.new(illust_params)
-
+    @illust.user_id = current_user.id
     respond_to do |format|
       if @illust.save
         format.html { redirect_to @illust, notice: 'Illust was successfully created.' }
