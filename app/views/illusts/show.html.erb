@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @illust.title %>
+</p>
+
+<p>
+  <strong>Memo:</strong>
+  <%= @illust.memo %>
+</p>
+
+<p>
+  <strong>Author:</strong>
+  <%= @illust.author %>
+</p>
+
+<p>
+  <strong>Illust:</strong>
+  <%= @illust.illust %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @illust.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_illust_path(@illust) %> |
+<%= link_to 'Back', illusts_path %>
