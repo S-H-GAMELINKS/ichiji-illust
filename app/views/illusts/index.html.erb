@@ -34,4 +34,8 @@
 
 <br>
 
-<%= link_to 'New Illust', new_illust_path %>
+<% if user_signed_in? %>
+  <%= link_to 'New Illust', new_illust_path %>
+<% else %>
+  <%= link_to 'いちくらアカウントでログイン', new_illust_path %>
+<% end %>
