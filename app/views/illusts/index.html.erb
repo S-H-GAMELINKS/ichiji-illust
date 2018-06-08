@@ -37,5 +37,5 @@
 <% if user_signed_in? %>
   <%= link_to 'New Illust', new_illust_path %>
 <% else %>
-  <%= link_to 'いちくらアカウントでログイン', new_illust_path %>
+  <%= link_to 'いちくらアカウントでログイン', user_mastodon_omniauth_authorize_path %>
 <% end %>
