@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_06_08_131841) do
+ActiveRecord::Schema.define(version: 2018_06_08_131928) do
 
   create_table "illusts", force: :cascade do |t|
     t.text "title"
@@ -18,6 +18,14 @@ ActiveRecord::Schema.define(version: 2018_06_08_131841) do
     t.text "author"
     t.string "illust"
     t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "mastodon_clients", force: :cascade do |t|
+    t.string "domain"
+    t.string "client_id"
+    t.string "client_secret"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
