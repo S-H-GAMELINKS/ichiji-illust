@@ -35,6 +35,9 @@ gem 'devise'
 gem 'mastodon-api', require: 'mastodon'
 gem 'omniauth-mastodon'
 gem 'omniauth'
+
+# Using dotenv-rails
+gem 'dotenv-rails'
  
 # Using Carrierwave
 gem 'carrierwave'
