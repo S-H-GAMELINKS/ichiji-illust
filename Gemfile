@@ -30,6 +30,12 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# Using Mastodon Oauth
+gem 'devise'
+gem 'mastodon-api', require: 'mastodon'
+gem 'omniauth-mastodon'
+gem 'omniauth'
+ 
 # Using Carrierwave
 gem 'carrierwave'
 
