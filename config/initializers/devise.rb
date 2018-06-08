@@ -280,4 +280,21 @@ Devise.setup do |config|
   # When using OmniAuth, Devise cannot automatically set OmniAuth path,
   # so you need to do it manually. For the users scope, it would be:
   # config.omniauth_path_prefix = '/my_engine/users/auth'
+
+  config.omniauth :mastodon, ENV['MASTODON_ACCESS_KEY'], ENV['MASTODON_SECRET_KEY']
+
+  config.omniauth :mastodon, scope: 'read follow', credentials: lambda { |domain, callback_url|
+  client = MastodonClient.where(domain: domain).first_or_initialize(domain: domain)
+
+  return [client.client_id, client.client_secret] unless client.new_record?
+
+  new_client = Mastodon::REST::Client.new(base_url: "https://#{domain}").create_app('MastodonLoginSample', callback_url, 'read follow')
+
+  client.client_id = new_client.client_id
+  client.client_secret = new_client.client_secret
+  client.save
+
+  [client.client_id, client.client_secret]
+  }
+
 end
