@@ -15,7 +15,6 @@ class IllustsController < ApplicationController
   # GET /illusts/new
   def new
     @illust = Illust.new
-    @illust.author = current_user.uid
   end
 
   # GET /illusts/1/edit
@@ -27,6 +26,7 @@ class IllustsController < ApplicationController
   def create
     @illust = Illust.new(illust_params)
     @illust.user_id = current_user.id
+    @illust.author = current_user.uid
     respond_to do |format|
       if @illust.save
         format.html { redirect_to @illust, notice: 'Illust was successfully created.' }
