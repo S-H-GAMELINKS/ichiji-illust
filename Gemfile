@@ -42,6 +42,9 @@ gem 'dotenv-rails'
 # Using Carrierwave
 gem 'carrierwave'
 
+# Using PWA
+gem "serviceworker-rails"
+
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
