@@ -1,10 +1,12 @@
 class IllustsController < ApplicationController
   before_action :set_illust, only: [:show, :edit, :update, :destroy]
 
+  PER = 10
+
   # GET /illusts
   # GET /illusts.json
   def index
-    @illusts = Illust.all
+    @illusts = Illust.page(params[:page]).per(PER)
   end
 
   # GET /illusts/1

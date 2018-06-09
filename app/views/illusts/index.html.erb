@@ -31,6 +31,8 @@
 </table>
 
 <br>
+<%= paginate @illust %>
+<br>
 
 <% if user_signed_in? %>
   <%= link_to 'New Illust', new_illust_path %>
