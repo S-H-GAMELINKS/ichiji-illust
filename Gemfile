@@ -50,6 +50,7 @@ gem "serviceworker-rails"
 
 # Using Kaminari
 gem 'kaminari', '~> 0.17.0'
+gem 'kaminari-bootstrap', '~> 3.0.1'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
