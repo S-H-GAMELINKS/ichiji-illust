@@ -51,6 +51,9 @@ gem "serviceworker-rails"
 # Using AWS S3
 gem 'fog'
 
+# Using Kaminari
+gem 'kaminari', '~> 0.17.0'
+
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
