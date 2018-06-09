@@ -57,7 +57,7 @@ class IllustsController < ApplicationController
   def destroy
     @illust.destroy
     respond_to do |format|
-      format.html { redirect_to illusts_url, notice: 'Illust was successfully destroyed.' }
+      format.html { redirect_to root_url, notice: 'Illust was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
