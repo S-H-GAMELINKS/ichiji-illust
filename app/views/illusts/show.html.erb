@@ -20,10 +20,6 @@
   <%= image_tag(@illust.illust_url) if @illust.illust.present? %>
 </p>
 
-<%if @illust.user_id == current_user.id %>
-  <a href="https://mastoshare.net/post.php?text="イラストを投稿しました！" onclick="window.open(this.href, '', 'width=500,height=400'); return false;"><img src="https://mastoshare.net/img/toot.svg" width="75" height="20"></a>
-<% end %>
-
 <a href="https://mastoshare.net/post.php?text="作品を見ました！" onclick="window.open(this.href, '', 'width=500,height=400'); return false;"><img src="https://mastoshare.net/img/toot.svg" width="75" height="20"></a>
 
 <%= link_to 'Edit', edit_illust_path(@illust) %> |
