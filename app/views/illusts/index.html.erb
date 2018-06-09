@@ -22,10 +22,10 @@
         <td><%= illust.author %></td>
         <td><%= illust.illust %></td>
         <td><%= illust.user_id %></td>
-        <td><%= link_to 'Show', illust %></td>
+        <td><%= button_to 'Show', illust %></td>
         <% if illust.user_id = current_user.id %>
-        <td><%= link_to 'Edit', edit_illust_path(illust) %></td>
-        <td><%= link_to 'Destroy', illust, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= button_to 'Edit', edit_illust_path(illust) %></td>
+        <td><%= button_to 'Destroy', illust, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         <% end %>
       </tr>
     <% end %>
