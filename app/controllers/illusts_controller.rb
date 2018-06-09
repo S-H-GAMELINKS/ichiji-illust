@@ -15,6 +15,7 @@ class IllustsController < ApplicationController
   # GET /illusts/new
   def new
     @illust = Illust.new
+    @illust.author = current_user.uid
   end
 
   # GET /illusts/1/edit
