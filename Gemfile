@@ -36,6 +36,9 @@ gem 'mastodon-api', require: 'mastodon'
 gem 'omniauth-mastodon'
 gem 'omniauth'
 
+# Using Jquery
+gem 'jquery-rails'
+
 # Using dotenv-rails
 gem 'dotenv-rails'
  
