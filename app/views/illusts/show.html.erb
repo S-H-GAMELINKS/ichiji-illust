@@ -20,7 +20,9 @@
   <%= image_tag(@illust.illust_url) if @illust.illust.present? %>
 </p>
 
-<%= link_to "いちくらへシェア", "https://mastoshare.net/post.php?text=#{User.find(@illust.user_id).uid}さんの#{@illust.title}を見ました！"%>
+<p>
+  <%= link_to "いちくらへシェア", "https://mastoshare.net/post.php?text=#{User.find(@illust.user_id).uid}さんの#{@illust.title}を見ました！"%>
+</p>
 
 <%= link_to 'Edit', edit_illust_path(@illust) %> |
 <%= link_to 'Back', illusts_path %>
