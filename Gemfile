@@ -48,6 +48,9 @@ gem 'carrierwave'
 # Using PWA
 gem "serviceworker-rails"
 
+# Using AWS S3
+gem 'fog-aws'
+
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
