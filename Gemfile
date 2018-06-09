@@ -48,9 +48,6 @@ gem 'carrierwave'
 # Using PWA
 gem "serviceworker-rails"
 
-# Using AWS S3
-gem 'fog'
-
 # Using Kaminari
 gem 'kaminari', '~> 0.17.0'
 
@@ -58,6 +55,9 @@ gem 'kaminari', '~> 0.17.0'
 gem 'bootsnap', '>= 1.1.0', require: false
 
 group :production do
+  # Using AWS S3
+  gem 'fog'
+
   gem 'pg', '~> 0.20'
 end
 
