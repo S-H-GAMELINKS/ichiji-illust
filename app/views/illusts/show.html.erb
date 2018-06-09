@@ -17,7 +17,7 @@
 
 <p>
   <strong>Illust:</strong>
-  <%= @illust.illust %>
+  <%= image_tag(@illust.illust_url) if @illust.illust.present? %>
 </p>
 
 <p>
