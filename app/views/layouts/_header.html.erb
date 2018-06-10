@@ -15,7 +15,7 @@
           <li><%= link_to "Top", root_path %></li>
           <li><%= link_to 'イラスト投稿', new_illust_path %></li>
           <li><%= link_to "ソースコード", "https://github.com/S-H-GAMELINKS/ichiji-illust" %></li>
-          <li><%= button_to "ログアウト", destroy_user_session_path, method: :delete %></li>
+          <li><%= linkt_to "ログアウト", destroy_user_session_path, method: :delete %></li>
         <% else %>
           <li><%= link_to "いちくらログイン", user_mastodon_omniauth_authorize_path %></li>
         <% end %>
