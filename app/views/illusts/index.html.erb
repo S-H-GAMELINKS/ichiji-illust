@@ -1,12 +1,14 @@
 <p id="notice"><%= notice %></p>
 
-<div class="form-group">
-  <%= f.label :name_cont, "作品名" %>
-  <%= f.text_field :title_cont, class: "form-control" %>
-  <%= f.label :name_cont, "作者名" %>
-  <%= f.collection_select(:author_eq, User.all.uid, :name, :name, include_blank: true, class: "form-control") %>
-</div>
-<div class="actions"><%= f.submit "Search" %></div>
+<%= search_form_for @search do |f| %>
+  <div class="form-group">
+    <%= f.label :name_cont, "作品名" %>
+    <%= f.text_field :title_cont, class: "form-control" %>
+    <%= f.label :name_cont, "作者名" %>
+    <%= f.collection_select(:author_eq, User.all.uid, :name, :name, include_blank: true, class: "form-control") %>
+  </div>
+  <div class="actions"><%= f.submit "Search" %></div>
+<% end %>
 
 <h1>Illusts</h1>
 
