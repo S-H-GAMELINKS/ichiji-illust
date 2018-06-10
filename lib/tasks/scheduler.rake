@@ -7,5 +7,4 @@ task :toot => :environment do
     @illust = Illust.find(rand(Illust.ids))
     message = ("#{@illust.author} さんの作品 [#{@illust.title}] です！\n\n [作品解説]\n #{@illust.memo} https://ichiji-illust.herokuapp.com/illusts/#{@illust.id}")
     response = client.create_status(message)
-    end
 end
