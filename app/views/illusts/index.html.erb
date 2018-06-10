@@ -4,8 +4,8 @@
   <div class="form-group">
     <%= f.label :name_cont, "作品名" %>
     <%= f.text_field :title_cont, class: "form-control" %>
-    <% f.label :name_cont, "作者名" %>
-    <% f.collection_select(:author_eq, User.all, :uid, :uid, include_blank: true, class: "form-control") %>
+    <%= f.label :name_cont, "作者名" %>
+    <%= f.collection_select(:author_eq, User.all, :uid, :uid, include_blank: true, class: "form-control") %>
   </div>
   <div class="actions"><%= f.submit "Search" %></div>
 <% end %>
