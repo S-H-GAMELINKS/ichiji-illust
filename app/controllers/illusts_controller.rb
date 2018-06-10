@@ -7,7 +7,7 @@ class IllustsController < ApplicationController
   # GET /illusts.json
   def index
     @search = Illust.search(params[:q])
-    @illust = @search.result.page(params[:page]).per(PER)
+    @illust = Illust.all#@search.result.page(params[:page]).per(PER)
   end
 
   # GET /illusts/1
