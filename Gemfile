@@ -60,7 +60,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 
 group :production do
   # Using AWS S3
-  gem 'fog'
+  #gem 'fog'
 
   gem 'pg', '~> 0.20'
 end
