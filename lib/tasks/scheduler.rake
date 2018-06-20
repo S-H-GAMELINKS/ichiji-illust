@@ -20,7 +20,7 @@ task :new_user => :environment do
         if toot.uri.to_s =~ /#{ENV['MASTODON_URL'].to_s}/ then
             message = ("@S_H_@ichiji.social 燃えろ #IchijiIllust ")
             response = client.create_status(message, :visibility => 'unlisted')
-            break
+            next
         end
     end
 end
