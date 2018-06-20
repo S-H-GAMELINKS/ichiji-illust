@@ -160,10 +160,11 @@ GEM
       fog-json (~> 1.0)
       fog-xml (~> 0.1)
       ipaddress (~> 0.8)
-    fog-brightbox (0.14.0)
+    fog-brightbox (0.15.0)
       fog-core (~> 1.22)
       fog-json
       inflecto (~> 0.0.2)
+      mime-types
     fog-cloudatcost (0.1.2)
       fog-core (~> 1.36)
       fog-json (~> 1.0)
@@ -208,7 +209,7 @@ GEM
       fog-core (~> 1.40)
       fog-json (>= 1.0)
       ipaddress (>= 0.8)
-    fog-ovirt (1.0.3)
+    fog-ovirt (1.0.4)
       fog-core (~> 1.45)
       fog-json
       fog-xml (~> 0.1.1)
@@ -318,7 +319,7 @@ GEM
     multipart-post (2.0.0)
     netrc (0.11.0)
     nio4r (2.3.1)
-    nokogiri (1.8.2-x86-mingw32)
+    nokogiri (1.8.3-x86-mingw32)
       mini_portile2 (~> 2.3.0)
     oauth2 (1.4.0)
       faraday (>= 0.8, < 0.13)
@@ -381,7 +382,7 @@ GEM
     rb-fsevent (0.10.3)
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
-    rbovirt (0.1.5)
+    rbovirt (0.1.6)
       nokogiri
       rest-client (> 1.7.0)
     rbvmomi (1.12.0)
@@ -414,7 +415,7 @@ GEM
       rubyzip (~> 1.2)
     serviceworker-rails (0.5.5)
       railties (>= 3.1)
-    sprockets (3.7.1)
+    sprockets (3.7.2)
       concurrent-ruby (~> 1.0)
       rack (> 1, < 3)
     sprockets-rails (3.2.1)
@@ -475,7 +476,7 @@ DEPENDENCIES
   omniauth-mastodon
   pg (~> 0.20)
   puma (~> 3.11)
-  rails (~> 5.2.0)
+  rails (~> 5.2.0.rc1)
   ransack
   sass-rails (~> 5.0)
   selenium-webdriver
