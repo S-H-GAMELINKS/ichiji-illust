@@ -10,6 +10,9 @@ task :toot => :environment do
 end
 
 task :new_user => :environment do
+
+    require 'mastodon'
+
     stream = Mastodon::Streaming::Client.new(base_url: ENV["MASTODON_URL"], bearer_token: ENV["MASTODON_ACCESS_TOKEN"])
     client = Mastodon::REST::Client.new(base_url: ENV["MASTODON_URL"], bearer_token: ENV["MASTODON_ACCESS_TOKEN"])
     
