@@ -32,7 +32,7 @@ gem 'jbuilder', '~> 2.5'
 
 # Using Mastodon Oauth
 gem 'devise'
-gem 'mastodon-api', require: 'mastodon'
+gem 'mastodon-api', git: 'https://github.com/tootsuite/mastodon-api.git', ref: '189deb8'
 gem 'omniauth-mastodon'
 gem 'omniauth'
 
