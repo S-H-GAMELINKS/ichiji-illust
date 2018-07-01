@@ -27,6 +27,8 @@ class IllustsController < ApplicationController
   # POST /illusts
   # POST /illusts.json
   def create
+    require 'mastodon'
+
     client = Mastodon::REST::Client.new(base_url: ENV["MASTODON_URL"], bearer_token: ENV["MASTODON_ACCESS_TOKEN"])
 
     @illust = Illust.new(illust_params)
