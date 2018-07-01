@@ -27,11 +27,14 @@ class IllustsController < ApplicationController
   # POST /illusts
   # POST /illusts.json
   def create
+    client = Mastodon::REST::Client.new(base_url: ENV["MASTODON_URL"], bearer_token: ENV["MASTODON_ACCESS_TOKEN"])
+
     @illust = Illust.new(illust_params)
     @illust.user_id = current_user.id
     @illust.author = current_user.uid
     respond_to do |format|
       if @illust.save
+        message = ("新しいイラストを#{@illust.author} さんが投稿しました！ https://ichiji-illust.herokuapp.com/illusts/#{@illust.id} #いちイラ")
         format.html { redirect_to @illust, notice: 'Illust was successfully created.' }
         format.json { render :show, status: :created, location: @illust }
       else
