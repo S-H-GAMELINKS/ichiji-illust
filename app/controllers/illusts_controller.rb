@@ -37,6 +37,7 @@ class IllustsController < ApplicationController
     respond_to do |format|
       if @illust.save
         message = ("新しいイラストを#{@illust.author} さんが投稿しました！ https://ichiji-illust.herokuapp.com/illusts/#{@illust.id} #いちイラ")
+        response = client.create_status(message)
         format.html { redirect_to @illust, notice: 'Illust was successfully created.' }
         format.json { render :show, status: :created, location: @illust }
       else
