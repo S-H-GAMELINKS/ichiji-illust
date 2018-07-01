@@ -5,7 +5,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable, :omniauthable
 
   def self.find_for_oauth(auth)
-    user = User.where(uid: auth.extra.raw_info.display_name, provider: auth.provider).first
+    user = User.where(email: auth.uid, provider: auth.provider).first
+    user.update!(uid: auth.extra.raw_info.display_name)
       
     unless user
       user = User.create(
