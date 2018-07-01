@@ -39,11 +39,15 @@ gem 'omniauth'
 # Using Jquery
 gem 'jquery-rails'
 
-# Using dotenv-rails
-gem 'dotenv-rails'
- 
 # Using Carrierwave
 gem 'carrierwave'
+
+# Using AWS S3
+gem 'fog'
+gem 'ovirt-engine-sdk'
+
+# Using dotenv-rails
+gem 'dotenv-rails'
 
 # Using PWA
 gem "serviceworker-rails"
@@ -59,9 +63,6 @@ gem 'ransack'
 gem 'bootsnap', '>= 1.1.0', require: false
 
 group :production do
-  # Using AWS S3
-  #gem 'fog'
-
   gem 'pg', '~> 0.20'
 end
 
