@@ -1,0 +1,26 @@
+p#notice
+  = notice
+p
+  strong
+    | Title:
+  = @illust.title
+p
+  strong
+    | Memo:
+  = @illust.memo
+p
+  strong
+    | Author:
+  = @illust.author
+p
+  strong
+    | Illust:
+  = image_tag(@illust.illust_url) if @illust.illust.present?
+- if notice == 'Illust was successfully updated.' || notice == 'Illust was successfully created.'
+  p
+    = link_to "いちくらへお知らせ", "https://mastoshare.net/post.php?text=新しく#{@illust.title}を投稿しました！"
+p
+  = link_to "いちくらへシェア", "https://mastoshare.net/post.php?text=#{User.find(@illust.user_id).uid}さんの#{@illust.title}を見ました！"
+= link_to 'Edit', edit_illust_path(@illust)
+|  | 
+= link_to 'Back', illusts_path
