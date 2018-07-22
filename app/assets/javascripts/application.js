@@ -17,3 +17,4 @@
 //= require jquery_ujs
 //= require_tree .
 //= require serviceworker-companion
+//= require masonry/jquery.masonry
