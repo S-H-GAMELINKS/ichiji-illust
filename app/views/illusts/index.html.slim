@@ -16,7 +16,9 @@ br
   - @illusts.each do |illust|
     .mas-box
       - image = MiniMagick::Image.open(illust.illust_url)
-      = link_to(image_tag(image.resize("300x300")), illust)
+      - image.resize("300x300")
+      - image.write "#{illust.illust}"
+      = link_to(image_tag(illust.illust), illust)
 br
 = paginate @illusts
 br
