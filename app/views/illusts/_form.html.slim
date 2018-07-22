@@ -1,0 +1,21 @@
+= form_with(model: illust, local: true) do |form|
+  - if illust.errors.any?
+    #error_explanation
+      h2
+        = pluralize(illust.errors.count, "error")
+        |  prohibited this illust from being saved:
+      ul
+        - illust.errors.full_messages.each do |message|
+          li
+            = message
+  .field
+    = form.label :title
+    = form.text_area :title
+  .field
+    = form.label :memo
+    = form.text_area :memo
+  .field
+    = form.label :illust
+    = form.file_field :illust
+  .actions
+    = form.submit
