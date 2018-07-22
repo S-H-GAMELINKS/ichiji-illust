@@ -43,8 +43,7 @@ gem 'jquery-rails'
 gem 'carrierwave'
 
 # Using AWS S3
-gem 'fog'
-gem 'ovirt-engine-sdk'
+gem 'fog-aws'
 
 # Using dotenv-rails
 gem 'dotenv-rails'
