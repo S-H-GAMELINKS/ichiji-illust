@@ -15,7 +15,8 @@ br
 #masonry-container
   - @illusts.each do |illust|
     .mas-box
-      = link_to(image_tag(MiniMagick::Image.open(illust.illust_url).resize("300x300")), illust)
+      - image = MiniMagick::Image.open(illust.illust_url)
+      = link_to(image_tag(image.resize("300x300")), illust)
 br
 = paginate @illusts
 br
