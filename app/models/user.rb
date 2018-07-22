@@ -6,7 +6,10 @@ class User < ApplicationRecord
 
   def self.find_for_oauth(auth)
     user = User.where(email: auth.uid, provider: auth.provider).first
-    user.update!(uid: auth.extra.raw_info.display_name)
+    
+    if user != nil then
+      user.update!(uid: auth.extra.raw_info.display_name)
+    end
       
     unless user
       user = User.create(
