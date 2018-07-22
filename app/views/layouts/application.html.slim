@@ -1,0 +1,16 @@
+doctype html
+html
+  head
+    title
+      | IchijiIllust
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+    link[rel="manifest" href="/manifest.json"]
+    meta[name="apple-mobile-web-app-capable" content="yes"]
+  body
+    = render 'layouts/header'
+    div[align="center"]
+      = yield
+    = render 'layouts/footer'
